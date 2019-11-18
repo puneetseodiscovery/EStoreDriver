@@ -42,14 +42,42 @@
             android:background="@color/colorTheme"
             app:tabTextColor="@color/colorWhite"
             app:tabSelectedTextColor="@color/colorWhite"
-            app:tabIndicatorColor="@color/colorWhite"></com.google.android.material.tabs.TabLayout>
+            app:tabIndicatorColor="@color/colorWhite">
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/dashboard_viewpager"
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ongoing"
+                android:text="Ongoing">
+
+            </com.google.android.material.tabs.TabItem>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/delivered"
+                android:text="Delivered">
+
+            </com.google.android.material.tabs.TabItem>
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/returns"
+                android:text="Return">
+
+            </com.google.android.material.tabs.TabItem>
+        </com.google.android.material.tabs.TabLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/dashboard_tablayout"></androidx.viewpager.widget.ViewPager>
+            android:layout_height="match_parent"
+            android:layout_below="@id/dashboard_tablayout">
 
+        </FrameLayout>
 
 
 </RelativeLayout>

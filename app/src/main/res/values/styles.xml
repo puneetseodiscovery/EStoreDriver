@@ -14,7 +14,6 @@
     </style>
 
     <style name="AppTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">
-        <item name="android:background">@color/colorPrimary</item>
         <item name="tabIndicatorColor">@color/colorWhite</item>
     </style>
 
