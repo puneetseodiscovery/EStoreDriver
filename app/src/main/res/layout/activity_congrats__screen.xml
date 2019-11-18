@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    tools:context=".dashboard.Congrats_Screen">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/defaultmargin"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:text="Congratulations!"
+                android:layout_marginTop="@dimen/xmargin"
+                android:fontFamily="@font/latoregular"
+                android:textSize="@dimen/textsize_sp35"
+                android:layout_gravity="center"></TextView>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tick"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/xmargin"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order has been"
+                android:textSize="@dimen/largetext"
+                android:layout_gravity="center"
+                android:fontFamily="@font/latoregular"
+                android:layout_marginTop="@dimen/xmargin"
+                android:textColor="@color/colorBlack">
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivered."
+                android:textSize="@dimen/largetext"
+                android:layout_gravity="center"
+                android:fontFamily="@font/latoregular"
+                android:textColor="@color/colorBlack">
+            </TextView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:layout_margin="@dimen/xmargin"
+                android:text="Done"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/latoregular"></Button>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

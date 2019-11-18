@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.delivered.DeliveredDetailPage">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/deliver_backbt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_navigate_before_black_24dp"
+                android:background="@color/colorTrans"></ImageButton>
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/margin_dp55">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/defaultmargin">
+
+                <com.estoreid.estoredriver.dashboard.accept.AppMapView
+                    android:id="@+id/delivermapview"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:background="@color/colorBlack">
+
+                </com.estoreid.estoredriver.dashboard.accept.AppMapView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/deliverlocation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/xxmargin"
+                    android:layout_marginTop="190dp"
+                    android:layout_marginRight="@dimen/xxmargin"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:id="@+id/delivercircle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_dp15"
+                            android:src="@drawable/ic_circle"></ImageView>
+
+                        <TextView
+                            android:id="@+id/deliverdelivertext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_dp10"
+                            android:layout_toRightOf="@id/circle1"
+                            android:text="Deliver to:"></TextView>
+
+                        <TextView
+                            android:id="@+id/deliverdeliveraddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/deliverdelivertext"
+                            android:layout_marginLeft="@dimen/margin_dp10"
+                            android:layout_toRightOf="@id/delivercircle1"
+                            android:text="#1922,Street 7, New Delhi, India..."
+                            android:textColor="@color/colorBlack"></TextView>
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/margin_dp12"
+                            android:background="@color/colorTrans"
+                            android:src="@drawable/ic_location"></ImageButton>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/deliverlocation_view">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/defaultmargin"
+                            app:cardBackgroundColor="@color/colorWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="10dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/defaultmargin">
+
+                                <RelativeLayout
+                                    android:id="@+id/deliverlayoutone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_dp16"
+                                    android:layout_marginTop="@dimen/margin_dp10"
+                                    android:layout_marginRight="@dimen/margin_dp16">
+
+                                    <TextView
+                                        android:id="@+id/deliverorderholdername"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/latoregular"
+                                        android:text="holder name"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/normaltext"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/deliverorderpayment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignRight="@id/deliverorderholdername"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/latoregular"
+                                        android:text="Paid"
+                                        android:textColor="@color/colorgreen"
+                                        android:textSize="@dimen/normaltext"></TextView>
+
+
+                                    <TextView
+                                        android:id="@+id/deliverorderaddress_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/deliverorderholdername"
+                                        android:layout_marginTop="7dp"
+                                        android:fontFamily="@font/quicksand"
+                                        android:text="Address :-"
+                                        android:textColor="@color/colorBlack"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/deliverorderaddress_tv1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/deliverorderholdername"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_toRightOf="@id/deliverorderaddress_tv"
+                                        android:text="address"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/deliverorderdatetime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/deliverorderaddress_tv1"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="@font/quicksand"
+                                        android:text="Date time"></TextView>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/deliverorderdatetime"
+                                        android:layout_marginTop="@dimen/defaultmargin"
+                                        android:text="Items"
+                                        android:textSize="@dimen/normaltext"></TextView>
+                                </RelativeLayout>
+
+                                <View
+                                    android:id="@+id/deliverview1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/deliverlayoutone"
+                                    android:layout_marginLeft="@dimen/margin_dp10"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@color/colorgrey"></View>
+
+                                <RelativeLayout
+                                    android:id="@+id/deliverlayouttwo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/deliverview1"
+                                    android:layout_margin="@dimen/defaultmargin"
+                                    android:layout_marginTop="@dimen/defaultmargin">
+
+                                    <TextView
+                                        android:id="@+id/deliverorderproductname"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/latoregular"
+                                        android:text="Product name"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/normaltext"></TextView>
+
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignRight="@id/deliverorderproductname"
+                                        android:layout_alignParentRight="true">
+
+                                        <TextView
+                                            android:id="@+id/acceptorderprice"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="₹ 750"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="@dimen/normaltext"></TextView>
+
+                                        <TextView
+                                            android:id="@+id/deliverorderquantity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_toRightOf="@id/acceptorderprice"
+                                            android:background="@color/colorgrey"
+                                            android:gravity="center"
+                                            android:paddingLeft="@dimen/margin_dp5"
+                                            android:paddingRight="@dimen/margin_dp5"
+                                            android:text="x2"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/colorBlack"></TextView>
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:id="@+id/deliverorderproductcategory"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/deliverorderproductname"
+                                        android:layout_marginTop="3dp"
+                                        android:text="from boots category"></TextView>
+
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:id="@+id/deliverview2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/deliverlayouttwo"
+                                    android:layout_marginLeft="@dimen/margin_dp10"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@color/colorgrey"></View>
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/deliverview2"
+                                    android:layout_margin="@dimen/defaultmargin">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/latoregular"
+                                        android:text="Total amount"></TextView>
+
+                                    <TextView
+                                        android:id="@+id/deliverordertotalamount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:fontFamily="@font/latoregular"
+                                        android:text="₹ 1500"
+                                        android:textColor="@color/colorBlack"></TextView>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/margin_dp10"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/deliver_bt"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/margin_dp35"
+                                android:text="Deliver"
+                                android:textColor="@color/colorWhite"
+                                android:textAllCaps="false"
+                                android:layout_marginRight="@dimen/margin_dp70"
+                                android:layout_marginLeft="@dimen/margin_dp70"
+                                android:background="@drawable/round_green_bt"></Button>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/defaultmargin"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutone"
+                android:layout_marginLeft="@dimen/margin_dp16"
+                android:layout_marginRight="@dimen/margin_dp16"
+                android:layout_marginTop="@dimen/margin_dp10">
+
+                <TextView
+                    android:id="@+id/orderholdername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="holder name"
+                    android:fontFamily="@font/latoregular"
+                    android:textSize="@dimen/normaltext"
+                    android:textColor="@color/colorBlack"></TextView>
+
+                <TextView
+                    android:id="@+id/orderpayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"
+                    android:fontFamily="@font/latoregular"
+                    android:textColor="@color/colorgreen"
+                    android:textSize="@dimen/normaltext"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@id/orderholdername"></TextView>
+
+
+                <TextView
+                    android:id="@+id/orderaddress_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderholdername"
+                    android:layout_marginTop="7dp"
+                    android:text="Address :-"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/quicksand"></TextView>
+
+                <TextView
+                    android:id="@+id/orderaddress_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="address"
+                    android:layout_marginTop="2dp"
+                    android:layout_below="@id/orderholdername"
+                    android:layout_toRightOf="@id/orderaddress_tv"></TextView>
+
+                <TextView
+                    android:id="@+id/orderdatetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderaddress_tv1"
+                    android:text="Date time"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="5dp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Items"
+                    android:layout_below="@id/orderdatetime"
+                    android:layout_marginTop="@dimen/defaultmargin"
+                    android:textSize="@dimen/normaltext"></TextView>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/layoutone"
+                android:background="@color/colorgrey"
+                android:layout_marginLeft="@dimen/margin_dp10"
+                android:layout_marginRight="10dp"></View>
+
+            <RelativeLayout
+                android:id="@+id/layouttwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view1"
+                android:layout_marginTop="@dimen/defaultmargin"
+                android:layout_margin="@dimen/defaultmargin">
+
+                <TextView
+                    android:id="@+id/orderproductname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product name"
+                    android:fontFamily="@font/latoregular"
+                    android:textSize="@dimen/normaltext"
+                    android:textColor="@color/colorBlack"></TextView>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@id/orderproductname">
+
+                    <TextView
+                        android:id="@+id/orderprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹ 750"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/normaltext"
+                        ></TextView>
+
+                    <TextView
+                        android:id="@+id/orderquantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="x2"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:paddingLeft="@dimen/margin_dp5"
+                        android:paddingRight="@dimen/margin_dp5"
+                        android:background="@color/colorgrey"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/orderprice"
+                        android:layout_centerVertical="true"></TextView>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/orderproductcategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderproductname"
+                    android:layout_marginTop="3dp"
+                    android:text="from boots category"></TextView>
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/layouttwo"
+                android:background="@color/colorgrey"
+                android:layout_marginLeft="@dimen/margin_dp10"
+                android:layout_marginRight="10dp"></View>
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/defaultmargin"
+               android:layout_below="@id/view2">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/latoregular"
+                   android:text="Total amount"></TextView>
+
+               <TextView
+                   android:id="@+id/ordertotalamount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="₹ 1500"
+                   android:layout_alignParentRight="true"
+                   android:textColor="@color/colorBlack"
+                   android:fontFamily="@font/latoregular"></TextView>
+           </RelativeLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

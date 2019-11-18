@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark
+        </item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/latoregular</item>
+    </style>
+    <style name="DrawerTheme">
+        <item name="android:scrollbarThumbVertical">@color/colorWhite</item>
+    </style>
+
+    <style name="AppTheme.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="tabIndicatorColor">@color/colorWhite</item>
+    </style>
+
+</resources>
