@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         init();
         listerners();
+
+        // oncreate
     }
 
     private void init() {
