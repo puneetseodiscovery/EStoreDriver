@@ -38,7 +38,6 @@ public class LoginScreen extends AppCompatActivity {
     }
 
     private void listerners() {
-
         login_login_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,5 +46,4 @@ public class LoginScreen extends AppCompatActivity {
             }
         });
     }
-
 }
